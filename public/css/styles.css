@@ -1,0 +1,515 @@
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ece7e1;
+    cursor: default;
+    margin: 0;
+  }
+  
+  /*-----------------------  Navigation  -----------------------*/
+  nav {
+    background-color: #111111;
+    padding: 15px;
+    border-bottom: 2px solid #1a1a1a;
+    border-radius: 0%;
+    margin-bottom: 0%;
+  }
+
+  nav a {
+    padding: 20px;
+    text-transform: uppercase;
+    color: #ece7e1;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid #ff4655;
+    color: #ff4655;
+  }
+  
+  /*-----------------------  Footer  -----------------------*/
+  
+  footer {
+    background-color: #111111;
+    color: #7c7e82;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer p {
+    padding: 0 37% 0 37%;
+    font-size: 80%;
+  }
+  
+  footer span {
+    text-transform: uppercase;
+  }
+  
+  /*-----------------------  IndexHeader  -----------------------*/
+  
+  .indexHeader {
+    color: #ece7e1;
+    height: 600px;
+    padding: 0px;
+    background-image: url(../images/header-bg.jpg);
+    background-position: 50% 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .indexHeader p {
+    font-weight: bold;
+  }
+  
+  .indexHeader h3 {
+    font-size: 300%;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    color: #ff4655;
+  }
+  
+  .btn {
+    /* Clean style */
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    color: var(--button-text-color);
+    cursor: pointer;
+    /* Clean style */
+    
+    --button-text-color: var(--background-color);
+    --button-text-color-hover: var(--button-background-color);
+    --border-color: #7D8082;
+    --button-background-color: #ece8e1;
+    --highlight-color: #ff4655;
+    --button-inner-border-color: transparent;
+    --button-bits-color: var(--background-color);
+    --button-bits-color-hover: var(--button-background-color);
+    
+    position: relative;
+    padding: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+  
+  .btn::before,
+  .btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0; left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid var(--border-color);
+    transition: all .15s ease;
+  }
+  
+  .btn::before {
+    background-color: #0f1923;
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .btn::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .btn:active,
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn:active::before,
+  .btn:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .btn:active::before {
+    top: 3px;
+  }
+  
+  .btn:active::after {
+    bottom: 3px;
+  }
+  
+  .btn__inner {
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    background-color: var(--button-background-color);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+  }
+  
+  .btn__inner::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: var(--button-bits-color);
+  }
+  
+  .btn__inner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0; bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: var(--button-bits-color);
+    transition: all .2s ease;
+  }
+  
+  .btn__slide {
+    display: block;
+    position: absolute;
+    top: 0; bottom: -1px; left: -8px;
+    width: 0;
+    background-color: var(--highlight-color);
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .btn__content {
+    position: relative;
+  }
+  
+  .btn:hover {
+    color: var(--button-text-color-hover);
+  }
+  
+  .btn:hover .btn__slide {
+    width: calc(100% + 15px);
+  }
+  
+  .btn:hover .btn__inner::after {
+    background-color: var(--button-bits-color-hover);
+  }
+  
+  .btn--light {
+    --button-background-color: var(--background-color);
+    --button-text-color: var(--highlight-color);
+    --button-inner-border-color: var(--highlight-color);
+    --button-text-color-hover: #ece8e1;
+    --button-bits-color-hover: #ece8e1;
+  }
+
+  .valbtn {
+    background-color: #0f1923;
+  }
+  
+  /*-----------------------  Agents-page  -----------------------*/
+  
+  .agentsImages {
+    padding: 30px 50px 50px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .agentsImages img {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 25%;
+  }
+  
+  .agentsMainText {
+    margin-left: 70px;
+    width: 20%;
+    border-bottom: 1px solid black;
+    margin-top: 70px;
+  }
+  
+  .agentsMainText h2 {
+    color: #383e3a;
+  }
+  
+  .agentsMainText p {
+    color: #7c7e86;
+  }
+  
+  /*-----------------------  Specs-page  -----------------------*/
+  
+  .specsIntro {
+    background-image: url(../images/viperbg.jpg);
+    background-position: 50% 10%;
+    background-repeat: no-repeat;
+    color: #ece7e1;
+    padding: 50px;
+    height: 450px;
+  }
+  
+  .specsIntro h1 {
+    margin-top: 160px;
+    margin-left: 370px;
+    font-size: 400%;
+    text-transform: uppercase;
+    border-top: solid 1px #ece7e1;
+    width: 20%;
+    padding-top: 40px;
+  }
+  
+  .hardwareIntro {
+    margin-left: 430px;
+    width: 60%;
+  }
+  
+  .hardwareBlock h2 {
+    color: #0f1923;
+    text-transform: uppercase;
+    font-size: 200%;
+    margin-top: 80px;
+  }
+  
+  .hardwareBlock2 p {
+    background-color: #0f1923;
+    color: #ece7e1;
+    margin-left: 1px;
+    padding: 38px;
+    width: 20%;
+    text-align: center;
+  }
+  
+  .hardwareBlock2 img {
+    margin-top: 4px;
+  }
+  
+  .hardwareBlock2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .hardwareSub1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hardwareSub2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #hardwareSub2 {
+    color: #0f1923;
+    font-weight: bold;
+  }
+  
+  .hardwareSub3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  #hardwareSub3 {
+    color: #0f1923;
+    font-weight: bold;
+  }
+  
+  .hardwareSub1 p {
+    background-color: #8c978f;
+    color: #ece7e1;
+    padding: 38px;
+    width: 20%;
+    text-align: center;
+    margin-left: 1px;
+  }
+  
+  .miniBlock1 {
+    margin-top: 4px;
+  }
+  
+  .hardwareSub2 p {
+    background-color: #8c978f;
+    color: #ece7e1;
+    padding: 38px;
+    width: 20%;
+    text-align: center;
+    margin-left: 1px;
+  }
+  
+  .hardwareSub3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .hardwareSub3 p {
+    background-color: #8c978f;
+    color: #ece7e1;
+    padding: 38px;
+    width: 20%;
+    text-align: center;
+    margin-left: 1px;
+  }
+  
+  .hardwareSub2 {
+    margin-top: -31px;
+  }
+  
+  .hardwareSub3 {
+    margin-top: -31px;
+    margin-bottom: 100px;
+  }
+  
+  /*-----------------------  Signup-page  -----------------------*/
+  
+  .signupWrapper {
+    background-image: url(../images/valorantbg.jpg);
+    background-position: center top;
+    padding-bottom: 80px;
+  }
+  
+  .accountIntro {
+    color: #ece7e1;
+    font-size: 200%;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-left: 120px;
+    width: 30%;
+  }
+  
+  .formBlock {
+    margin-left: 80px;
+    background-color: #ece7e1;
+    width: 25%;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  
+  .emailIntro {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #1a1a1a;
+  }
+  
+  .email input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ededed;
+  }
+  
+  .newsletter {
+    color: #1a1a1a;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .email {
+    padding: 10px;
+  }
+  
+  .ageIntro h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #1a1a1a;
+  }
+  
+  .ageIntro p {
+    color: #1a1a1a;
+    font-size: 120%;
+    margin-left: 10px;
+  }
+  
+  .age label {
+    color: #1a1a1a;
+    padding: 10px;
+  }
+  
+  .age {
+    margin-bottom: 50px;
+  }
+  
+  .usernameIntro h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #1a1a1a;
+  }
+  
+  .usernameIntro p {
+    color: #1a1a1a;
+    font-size: 120%;
+    margin-left: 10px;
+  }
+  
+  .username input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ededed;
+  }
+  
+  .username {
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .passwordIntro h1 {
+    text-transform: uppercase;
+    padding: 10px;
+    color: #1a1a1a;
+  }
+  
+  .passwordIntro p {
+    color: #1a1a1a;
+    font-size: 120%;
+    margin-left: 10px;
+  }
+  
+  .password input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ededed;
+  }
+  
+  .password {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .passwordCheck input {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ededed;
+  }
+  
+  .passwordCheck {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .submit {
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .submit input {
+    background-color: #ff4655;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .submit input:hover {
+    background-color: #0f1923;
+    transition: 0.5s;
+  }
+  
