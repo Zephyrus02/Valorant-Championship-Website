@@ -44,25 +44,23 @@
     text-transform: uppercase;
   }
   
-  /*-----------------------  IndexHeader  -----------------------*/
+  /*-----------------------  Header  -----------------------*/
   
-  .indexHeader {
+  .Header {
     color: #ece7e1;
     height: 600px;
     padding: 0px;
-    background-image: url(../images/header-bg.jpg);
-    background-position: 50% 5%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
   }
   
-  .indexHeader p {
+  .Header p {
     font-weight: bold;
   }
   
-  .indexHeader h3 {
+  .Header h3 {
     font-size: 300%;
     font-weight: bold;
     margin: 0 0 30px 0;
@@ -204,165 +202,41 @@
   }
 
   .valbtn {
+    display: inline-block;
     background-color: #0f1923;
+    margin: 10px;
   }
   
-  /*-----------------------  Agents-page  -----------------------*/
+  /*-----------------------  Home-page  -----------------------*/
   
-  .agentsImages {
-    padding: 30px 50px 50px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
+ .home{
+    background-image: url(../images/homebg.jpg);
+    background-position: 50% 5%;
+ }
+
+  /*-----------------------  Teams-page  -----------------------*/
+  
+  .teams{
+    background-image: url(../images/headerbg.jpg);
+    background-position: 50% 5%;
+ }
+  
+  /*-----------------------  Builder-page  -----------------------*/
+  
+  .builder{
+    background-image: url(../images/headerbg.jpg);
+    background-position: 50% 5%;
   }
-  
-  .agentsImages img {
-    padding: 20px;
-    box-sizing: border-box;
-    width: 25%;
+  .builderbtn{
+    margin-left: 40%;
   }
-  
-  .agentsMainText {
-    margin-left: 70px;
-    width: 20%;
-    border-bottom: 1px solid black;
-    margin-top: 70px;
-  }
-  
-  .agentsMainText h2 {
-    color: #383e3a;
-  }
-  
-  .agentsMainText p {
-    color: #7c7e86;
-  }
-  
-  /*-----------------------  Specs-page  -----------------------*/
-  
-  .specsIntro {
-    background-image: url(../images/viperbg.jpg);
-    background-position: 50% 10%;
-    background-repeat: no-repeat;
-    color: #ece7e1;
-    padding: 50px;
-    height: 450px;
-  }
-  
-  .specsIntro h1 {
-    margin-top: 160px;
-    margin-left: 370px;
-    font-size: 400%;
-    text-transform: uppercase;
-    border-top: solid 1px #ece7e1;
-    width: 20%;
-    padding-top: 40px;
-  }
-  
-  .hardwareIntro {
-    margin-left: 430px;
+
+  .builderform{
     width: 60%;
   }
-  
-  .hardwareBlock h2 {
+
+  .builderlabel {
     color: #0f1923;
-    text-transform: uppercase;
-    font-size: 200%;
-    margin-top: 80px;
-  }
-  
-  .hardwareBlock2 p {
-    background-color: #0f1923;
-    color: #ece7e1;
-    margin-left: 1px;
-    padding: 38px;
-    width: 20%;
-    text-align: center;
-  }
-  
-  .hardwareBlock2 img {
-    margin-top: 4px;
-  }
-  
-  .hardwareBlock2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  
-  .hardwareSub1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .hardwareSub2 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  #hardwareSub2 {
-    color: #0f1923;
-    font-weight: bold;
-  }
-  
-  .hardwareSub3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  #hardwareSub3 {
-    color: #0f1923;
-    font-weight: bold;
-  }
-  
-  .hardwareSub1 p {
-    background-color: #8c978f;
-    color: #ece7e1;
-    padding: 38px;
-    width: 20%;
-    text-align: center;
-    margin-left: 1px;
-  }
-  
-  .miniBlock1 {
-    margin-top: 4px;
-  }
-  
-  .hardwareSub2 p {
-    background-color: #8c978f;
-    color: #ece7e1;
-    padding: 38px;
-    width: 20%;
-    text-align: center;
-    margin-left: 1px;
-  }
-  
-  .hardwareSub3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .hardwareSub3 p {
-    background-color: #8c978f;
-    color: #ece7e1;
-    padding: 38px;
-    width: 20%;
-    text-align: center;
-    margin-left: 1px;
-  }
-  
-  .hardwareSub2 {
-    margin-top: -31px;
-  }
-  
-  .hardwareSub3 {
-    margin-top: -31px;
-    margin-bottom: 100px;
   }
   
   /*-----------------------  Signup-page  -----------------------*/

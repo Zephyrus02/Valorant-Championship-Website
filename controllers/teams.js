@@ -3,12 +3,23 @@ const Teams = require("../models/teams");
 async function createTeam(req, res) {
 	try {
 		await Teams.create({
-			name: req.body.name,
-			players: req.body.players,
+			teamname: req.body.teamname,
+			Player1: req.body.Player1,
+			IGN1: req.body.IGN1,
+			Player2: req.body.Player2,
+			IGN2: req.body.IGN2,
+			Player3: req.body.Player3,
+			IGN3: req.body.IGN3,
+			Player4: req.body.Player4,
+			IGN4: req.body.IGN4,
+			Player5: req.body.Player5,
+			IGN5: req.body.IGN5,
 		});
-		return res.status(200).json({ message: "Team created" });
+		return res
+			.status(200)
+			.render("teamBuilder", { message: "Team created successfully" });
 	} catch (error) {
-		return res.status(400).json({ message: error.message });
+		return res.status(400).render("teamBuilder", { message: error.message });
 	}
 }
 
