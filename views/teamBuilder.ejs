@@ -25,8 +25,8 @@
                 <li><a class="content" href="schedule">Schedule</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
@@ -39,67 +39,72 @@
                 <%= message %>
             </div>
             <% } %>
+                <% if (locals.message_err) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= message_err %>
+                    </div>
+                    <% } %>
 
-                <form class="builderform row g-3" action="/builder" method="POST">
-                    <div class="col-12">
-                        <label for="teamName" class="form-label">Team Name:</label>
-                        <input type="text" class="form-control" id="teamName" name="teamname">
-                    </div>
-                    <!-- ------------------------------------------------------------------ -->
-                    <div class="col-md-6">
-                        <label for="Player1" class="form-label">Player1 Name</label>
-                        <input type="text" class="form-control" id="Player1" name="Player1">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="IGN1" class="form-label">Player1 IGN</label>
-                        <input type="text" class="form-control" id="IGN1" name="IGN1">
-                    </div>
-                    <!-- ------------------------------------------------------------------ -->
-                    <div class="col-md-6">
-                        <label for="Player2" class="form-label">Player2 Name</label>
-                        <input type="text" class="form-control" id="Player2" name="Player2">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="IGN2" class="form-label">Player2 IGN</label>
-                        <input type="text" class="form-control" id="IGN2" name="IGN2">
-                    </div>
-                    <!-- ------------------------------------------------------------------- -->
-                    <div class="col-md-6">
-                        <label for="Player3" class="form-label">Player3 Name</label>
-                        <input type="text" class="form-control" id="Player3" name="Player3">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="IGN3" class="form-label">Player3 IGN</label>
-                        <input type="text" class="form-control" id="IGN3" name="IGN3">
-                    </div>
-                    <!-- -------------------------------------------------------------------- -->
-                    <div class="col-md-6">
-                        <label for="Player4" class="form-label">Player4 Name</label>
-                        <input type="text" class="form-control" id="Player4" name="Player4">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="IGN4" class="form-label">Player4 IGN</label>
-                        <input type="text" class="form-control" id="IGN4" name="IGN4">
-                    </div>
-                    <!-- -------------------------------------------------------------------- -->
-                    <div class="col-md-6">
-                        <label for="Player5" class="form-label">Player5 Name</label>
-                        <input type="text" class="form-control" id="Player5" name="Player5">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="IGN5" class="form-label">Player5 IGN</label>
-                        <input type="text" class="form-control" id="IGN5" name="IGN5">
-                    </div>1
-                    <!-- -------------------------------------------------------------------- -->
-                    <div class="valbtn builderbtn">
-                        <button class="btn btn--light" type="submit">
-                            <span class="btn__inner">
-                                <span class="btn__slide"></span>
-                                <span class="btn__content">Register</span>
-                            </span>
-                        </button>
-                    </div>
-                </form>
+                        <form class="builderform row g-3" action="/builder" method="POST">
+                            <div class="col-12">
+                                <label for="teamName" class="form-label">Team Name:</label>
+                                <input type="text" class="form-control" id="teamName" name="teamname">
+                            </div>
+                            <!-- ------------------------------------------------------------------ -->
+                            <div class="col-md-6">
+                                <label for="Player1" class="form-label">IGL Name</label>
+                                <input type="text" class="form-control" id="IGL" name="IGL">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="IGN1" class="form-label">IGL IGN</label>
+                                <input type="text" class="form-control" id="IGN1" name="IGN1">
+                            </div>
+                            <!-- ------------------------------------------------------------------ -->
+                            <div class="col-md-6">
+                                <label for="Player2" class="form-label">Player2 Name</label>
+                                <input type="text" class="form-control" id="Player2" name="Player2">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="IGN2" class="form-label">Player2 IGN</label>
+                                <input type="text" class="form-control" id="IGN2" name="IGN2">
+                            </div>
+                            <!-- ------------------------------------------------------------------- -->
+                            <div class="col-md-6">
+                                <label for="Player3" class="form-label">Player3 Name</label>
+                                <input type="text" class="form-control" id="Player3" name="Player3">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="IGN3" class="form-label">Player3 IGN</label>
+                                <input type="text" class="form-control" id="IGN3" name="IGN3">
+                            </div>
+                            <!-- -------------------------------------------------------------------- -->
+                            <div class="col-md-6">
+                                <label for="Player4" class="form-label">Player4 Name</label>
+                                <input type="text" class="form-control" id="Player4" name="Player4">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="IGN4" class="form-label">Player4 IGN</label>
+                                <input type="text" class="form-control" id="IGN4" name="IGN4">
+                            </div>
+                            <!-- -------------------------------------------------------------------- -->
+                            <div class="col-md-6">
+                                <label for="Player5" class="form-label">Player5 Name</label>
+                                <input type="text" class="form-control" id="Player5" name="Player5">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="IGN5" class="form-label">Player5 IGN</label>
+                                <input type="text" class="form-control" id="IGN5" name="IGN5">
+                            </div>1
+                            <!-- -------------------------------------------------------------------- -->
+                            <div class="valbtn builderbtn">
+                                <button class="btn btn--light" type="submit">
+                                    <span class="btn__inner">
+                                        <span class="btn__slide"></span>
+                                        <span class="btn__content">Register</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
     </header>
 
     <footer>

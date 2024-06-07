@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Valorant</title>
+    <title>Valorant Signup</title>
     <link rel="stylesheet" href="/css/styles.css" />
 </head>
 
@@ -24,30 +24,39 @@
                 <li><a class="content" href="standings">Standings</a></li>
                 <li><a class="content" href="schedule">Schedule</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
+            <h4 class="rightnav navbar-right">DEFY THE LIMITS</h4>
         </div>
     </nav>
-
-    <header class="Header home">
-
-        <h3><b>A One-Stop Solution For Competitive Matchmaking</b></h3>
-
-        <div class="valbtn">
-            <button class="btn btn--light">
-                <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span class="btn__content">Start Match</span>
-                </span>
-            </button>
+    <header class="Header signup">
+        <div class="signup-form">
+            <form action="/player" method="POST">
+                <h3>Create an Account</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control input-lg" name="name" placeholder="Name" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-lg" name="ID" placeholder="ID" required="required">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control input-lg" name="password" placeholder="Password"
+                        required="required">
+                </div>
+                <div class="signup-btn valbtn">
+                    <button class="btn btn--light">
+                        <span class="btn__inner">
+                            <span class="btn__slide"></span>
+                            <span class="btn__content">Signup</span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+            <div class="text-center hint-text">Already have an account? <a href="login">Login
+                    here</a></div>
         </div>
     </header>
-
     <footer>
         <h4>
-            &copy; 2024 Aneesh Raskar | <a href="https://www.linkedin.com/in/aneesh-raskar-8ab10b205/"
+            &copy; 2024 Aneesh Raskar | <a href=" https://www.linkedin.com/in/aneesh-raskar-8ab10b205/"
                 class="fa fa-linkedin" target="_blank" rel="noopener noreferrer"></a> | <a
                 href="https://github.com/Zephyrus02" class=" fa fa-github" target="_blank"
                 rel="noopener noreferrer"></a>

@@ -1,29 +1,43 @@
-const { getUser } = require("../service/auth");
+const { getPlayer } = require("../service/auth");
 
 function coreAuth(req, res, next) {
-	const userUID = req.cookies?.uid;
-	if (!userUID) {
-		req.user = null;
+	const PlayerUID = req.cookies?.uid;
+	if (!PlayerUID) {
+		req.Player = null;
 		return next();
 	}
-
-	const user = getUser(userUID);
-	req.user = user;
+	req.Player = getPlayer(PlayerUID);
 	next();
 }
 
-function restrictUser(roles = []) {
+function restrictPlayer(roles = []) {
 	return (req, res, next) => {
-		if (!req.user) {
+		if (!req.Player) {
 			return res.redirect("/login");
 		}
 
-		if (!roles.includes(req.user.role)) {
-			return res.status(403).render("teams", { message: "You are not authorized" });
+		if (!roles.includes(req.Player.role)) {
+			return res
+				.status(403)
+				.render("teams", { message: "You are not authorized" });
 		}
 
 		return next();
 	};
 }
 
-module.exports = { coreAuth, restrictUser };
+async function restrictLogin(req, res, next) {
+	const PlayerUID = req.cookies?.uid;
+	if (!PlayerUID) {
+		return res.redirect("/login");
+	}
+	req.Player = getPlayer(PlayerUID);
+
+	if (!req.Player) {
+		return res.redirect("/login");
+	}
+
+	return next();
+}
+
+module.exports = { coreAuth, restrictPlayer, restrictLogin };

@@ -205,6 +205,7 @@
     display: inline-block;
     background-color: #0f1923;
     margin: 10px;
+    opacity: 0.9;
   }
   
   /*-----------------------  Home-page  -----------------------*/
@@ -240,150 +241,66 @@
   }
   
   /*-----------------------  Signup-page  -----------------------*/
-  
-  .signupWrapper {
-    background-image: url(../images/valorantbg.jpg);
-    background-position: center top;
-    padding-bottom: 80px;
-  }
-  
-  .accountIntro {
-    color: #ece7e1;
-    font-size: 200%;
-    text-transform: uppercase;
-    padding: 10px;
-    margin-left: 120px;
-    width: 30%;
-  }
-  
-  .formBlock {
-    margin-left: 80px;
-    background-color: #ece7e1;
-    width: 25%;
-    padding: 30px;
-    border-radius: 5px;
-  }
-  
-  .emailIntro {
-    text-transform: uppercase;
-    padding: 10px;
-    color: #1a1a1a;
-  }
-  
-  .email input {
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ededed;
-  }
-  
-  .newsletter {
-    color: #1a1a1a;
-    padding: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .email {
-    padding: 10px;
-  }
-  
-  .ageIntro h1 {
-    text-transform: uppercase;
-    padding: 10px;
-    color: #1a1a1a;
-  }
-  
-  .ageIntro p {
-    color: #1a1a1a;
-    font-size: 120%;
-    margin-left: 10px;
-  }
-  
-  .age label {
-    color: #1a1a1a;
-    padding: 10px;
-  }
-  
-  .age {
-    margin-bottom: 50px;
-  }
-  
-  .usernameIntro h1 {
-    text-transform: uppercase;
-    padding: 10px;
-    color: #1a1a1a;
-  }
-  
-  .usernameIntro p {
-    color: #1a1a1a;
-    font-size: 120%;
-    margin-left: 10px;
-  }
-  
-  .username input {
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ededed;
-  }
-  
-  .username {
-    margin-left: 10px;
-    margin-bottom: 50px;
-  }
-  
-  .passwordIntro h1 {
-    text-transform: uppercase;
-    padding: 10px;
-    color: #1a1a1a;
-  }
-  
-  .passwordIntro p {
-    color: #1a1a1a;
-    font-size: 120%;
-    margin-left: 10px;
-  }
-  
-  .password input {
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ededed;
-  }
-  
-  .password {
-    margin-left: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .passwordCheck input {
-    border-radius: 5px;
-    padding: 10px;
-    background-color: #ededed;
-  }
-  
-  .passwordCheck {
-    margin-left: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .submit {
-    padding: 10px;
-    margin-top: 20px;
-  }
-  
-  .submit input {
-    background-color: #ff4655;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    text-transform: uppercase;
+  .signup {
+    background-image: url(../images/headerbg.jpg);
+    background-position: 50% 5%;
+}
+
+.rightnav {
+    color: #ff4655;
     font-weight: bold;
-  }
-  
-  .submit input:hover {
-    background-color: #0f1923;
-    transition: 0.5s;
-  }
-  
+    margin: 10px;
+}
+
+.form-control {
+    font-size: 16px;
+    transition: all 0.4s;
+    box-shadow: none;
+}
+
+.signup-form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.signup-form {
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: rgba(15,25,35, 0.7);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.signup-form a {
+    font-weight: bold;
+}
+
+.signup-form h3 {
+    text-align: center;
+    margin: 10px 0 15px;
+}
+
+.signup-form .hint-text {
+    color: #ff4655;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form .btn {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.signup-btn {
+    text-align: center;
+    margin-left: 38%;
+}

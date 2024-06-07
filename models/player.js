@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const teamSchema = mongoose.Schema({
+const playerSchema = mongoose.Schema({
 	name: {
 		type: String,
 		required: true,
@@ -10,21 +10,16 @@ const teamSchema = mongoose.Schema({
 		required: true,
 		unique: true,
 	},
-	IGN: {
+	password: {
 		type: String,
 		required: true,
 	},
-	team: {
+	role: {
 		type: String,
 		required: true,
-		unique: true,
+		enum: ["contestant", "admin"],
+		default: "contestant",
 	},
-    role: {
-        type: String,
-        required: true,
-        enum: ["contestant", "admin"],
-        default: "contestant",
-    },
 });
 
-module.exports = mongoose.model("Teams", teamSchema);
+module.exports = mongoose.model("player", playerSchema);

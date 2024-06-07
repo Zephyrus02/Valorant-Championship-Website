@@ -3,12 +3,12 @@ require("dotenv").config();
 
 const secret = process.env.JWT;
 
-function setUser(user) {
+function setPlayer(Player) {
 	return jwt.sign(
 		{
-			id: user.id,
-			email: user.email,
-			role: user.role,
+			name: Player.name,
+			ID: Player.ID,
+			role: Player.role,
 		},
 		secret,
 		{
@@ -17,7 +17,7 @@ function setUser(user) {
 	);
 }
 
-function getUser(token) {
+function getPlayer(token) {
 	if (!token) return null;
 	try {
 		return jwt.verify(token, secret);
@@ -26,4 +26,4 @@ function getUser(token) {
 	}
 }
 
-module.exports = { setUser, getUser };
+module.exports = { setPlayer, getPlayer };

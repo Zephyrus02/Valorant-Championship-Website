@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { restrictLogin } = require("../middlewares/auth");
 
 router.get("/", (req, res) => {
 	res.render("home");
@@ -21,12 +22,20 @@ router.get("/standings", (req, res) => {
 	res.render("standings");
 });
 
-router.get("/builder", (req, res) => {
+router.get("/builder", restrictLogin, (req, res) => {
 	res.render("teamBuilder");
 });
 
-router.get("/viewer", (req, res) => {
+router.get("/viewer", restrictLogin, (req, res) => {
 	res.render("teamViewer");
+});
+
+router.get("/signup", (req, res) => {
+	res.render("signup");
+});
+
+router.get("/login", (req, res) => {
+	res.render("login");
 });
 
 module.exports = router;

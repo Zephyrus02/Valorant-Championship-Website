@@ -4,7 +4,7 @@ async function createTeam(req, res) {
 	try {
 		await Teams.create({
 			teamname: req.body.teamname,
-			Player1: req.body.Player1,
+			IGL: req.body.IGL,
 			IGN1: req.body.IGN1,
 			Player2: req.body.Player2,
 			IGN2: req.body.IGN2,
@@ -19,7 +19,9 @@ async function createTeam(req, res) {
 			.status(200)
 			.render("teamBuilder", { message: "Team created successfully" });
 	} catch (error) {
-		return res.status(400).render("teamBuilder", { message: error.message });
+		return res
+			.status(400)
+			.render("teamBuilder", { message_err: error.message });
 	}
 }
 
